@@ -26,11 +26,10 @@ class FuelTanks {
 
     public:
         FuelTanks () { }
-        FuelTanks (string tip, double mas, int cos){
-            tipo = tip;
-            masa = mas;
-            costo = cos;
-        }
+        FuelTanks (string tip, double mas, int cos) :
+            tipo(tip),
+            masa(mas),
+            costo(cos) {};
 
         string GetTipo(){
             return tipo;

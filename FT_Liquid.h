@@ -26,16 +26,13 @@ class LiquidFT: public FuelTanks{
         float liquidCap;
 
     public:
-        LiquidFT () {
-            liquidCap = 0.0;
-        }
+        LiquidFT () :
+            FuelTanks(),
+            liquidCap(0.0) {};
 
-        LiquidFT (string tip, double mas, int cos, float liquidCap_c) {
-            tipo = tip;
-            masa = mas;
-            costo = cos;
-            liquidCap = liquidCap_c;
-        }
+        LiquidFT (string tip, double mas, int cos, float liquidCap_c) :
+            FuelTanks(tip, mas, cos),
+            liquidCap(liquidCap_c) {};
 
         float GetCap(){
             return liquidCap;

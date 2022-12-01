@@ -30,27 +30,24 @@ protected:
     double vacTWR;
 
 public:
-    Engine(){
-        tipo = "";
-        masa = 0.0;
-        costo = 0;
-        atmThrust = 0.0;
-        vacThrust = 0.0;
-        atmTWR = 0.0;
-        vacTWR = 0.0;
-    }
-    
-    Engine(string tip, double mas, int cos, double atm,
-           double vac, double atmT, double vacT)
-    {
-        tipo = tip;
-        masa = mas;
-        costo = cos;
-        atmThrust = atm;
-        vacThrust = vac;
-        atmTWR = atmT;
-        vacTWR = vacT;
-    }
+    Engine() :
+        tipo(""),
+        masa(0.0),
+        costo(0),
+        atmThrust(0.0),
+        vacThrust(0.0),
+        atmTWR(0.0),
+        vacTWR(0.0) {};
+
+    Engine(string tip, double mas, int cos, double atm, double vac, double atmT, double vacT) :
+        tipo(tip),
+        masa(mas),
+        costo(cos),
+        atmThrust(atm),
+        vacThrust(vac),
+        atmTWR(atmT),
+        vacTWR(vacT) {};
+
     string GetTipo()
     {
         return tipo;

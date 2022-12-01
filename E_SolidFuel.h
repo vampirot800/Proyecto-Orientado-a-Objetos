@@ -23,21 +23,14 @@ class SolidFuel: public Engine{
         int comb;
 
     public:
-        SolidFuel() {
-            burn = 0.0;
-            comb = 0;
-        };
-        SolidFuel(string tip, double mas, int cos, double atm,  double vac,double atmT, double vacT, float burn_c, int comb_c) {
-            tipo = tip;
-            masa = mas;
-            costo = cos;
-            atmThrust = atm;
-            vacThrust = vac;
-            atmTWR = atmT;
-            vacTWR = vacT;
-            burn = burn_c;
-            comb = comb_c;
-        };
+        SolidFuel() :
+            Engine(),
+            burn(0.0),
+            comb(0) {};
+        SolidFuel(string tip, double mas, int cos, double atm,  double vac,double atmT, double vacT, float burn_c, int comb_c) :
+            Engine(tip, mas, cos, atm, vacT, atmT, vacT),
+            burn(burn_c),
+            comb(comb_c) { };
 
         float GetBurn() {
             return burn;

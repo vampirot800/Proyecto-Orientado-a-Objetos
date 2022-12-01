@@ -24,10 +24,16 @@ private:
     double consumoElec;
 
 public:
-    IonFuel() : Engine(), consumoXen(0.0),consumoElec(0.0){}
+    IonFuel() :
+        Engine(),
+        consumoXen(0.0),
+        consumoElec(0.0) {};
 
-    IonFuel(string tip, double mas, int cos, double atm,
-            double vac, double atmT, double vacT, double consumoXen_c, double consumoElec_c) : Engine(tip, mas, cos, atm, vacT, atmT, vacT), consumoXen(consumoXen_c), consumoElec(consumoElec_c){};
+    IonFuel(string tip, double mas, int cos, double atm, double vac, double atmT, double vacT, double consumoXen_c, double consumoElec_c) :
+        Engine(tip, mas, cos, atm, vacT, atmT, vacT),
+        consumoXen(consumoXen_c),
+        consumoElec(consumoElec_c) {};
+
     double GetConsumoXenon()
     {
         return consumoXen;
