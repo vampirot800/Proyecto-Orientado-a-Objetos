@@ -23,6 +23,14 @@ class Pods{
         int capacidad;
 
     public:
+
+    Pods(){
+        tipo = "";
+        masa = 0.0;
+        costo = 0;
+        capacidad = 0;
+
+    }
         Pods(string tip, double mas, int cos, int cap){
             tipo = tip;
             masa = mas;
@@ -36,7 +44,7 @@ class Pods{
         double GetMasa(){
             return masa;
         }
-        int GeTCosto(){
+        int GetCosto(){
             return costo;
         }
         int GetCap(){

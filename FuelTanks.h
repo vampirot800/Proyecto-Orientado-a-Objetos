@@ -15,41 +15,53 @@ A01710879
 #define FUELTANKS_H_
 
 #include <string>
+#include <sstream>
 using namespace std;
 
-class FuelTanks{
-
-    private:
+class FuelTanks {
+    protected:
         string tipo;
         double masa;
         int costo;
 
     public:
-        FuelTanks (string tip, double mas, int cos){
-            tipo = tip;
-            masa = mas;
-            costo = cos;
-        }
+        FuelTanks();
+        FuelTanks(string tip, double mas, int cos);
 
-        string GetTipo(){
-            return tipo;
-        }
-        double GetMasa(){
-            return masa;
-        }
-        int GeTCosto(){
-            return costo;
-        }
-
-        void setTipo(string t){
-            tipo = t;
-        }
-        void setMasa(double m){
-            masa = m;
-        }
-        void setCosto(int c){
-            costo = c;       
-        }
+        string GetTipo();
+        double GetMasa();
+        int GetCosto();
+        void setTipo(string t);
+        void setMasa(double m);
+        void setCosto(int c);
 };
+
+
+FuelTanks::FuelTanks (string tip, double mas, int cos){
+    tipo = tip;
+    masa = mas;
+    costo = cos;
+}
+
+
+string FuelTanks::GetTipo(){
+    return tipo;
+}
+double FuelTanks::GetMasa(){
+    return masa;
+}
+int FuelTanks::GetCosto(){
+    return costo;
+}
+
+void FuelTanks::setTipo(string t){
+    tipo = t;
+}
+void FuelTanks::setMasa(double m){
+    masa = m;
+}
+void FuelTanks::setCosto(int c){
+    costo = c;       
+}
 
 #endif
