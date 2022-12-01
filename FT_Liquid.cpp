@@ -8,27 +8,23 @@ A01710879
  *tres tipos de fuel tanks disponibles (LiquidFuelTank)
  * Rocket FT, RCS FT, y Liquid FT
  */
-
-#ifndef FT_LIQUID_H_
-#define FT_LIQUID_H_
-
 #include <iostream>
 #include <string>
 #include <sstream>
 using namespace std;
-#include "FuelTanks.h"
+#include "FT_Liquid.h"
 
+LiquidFT::LiquidFT () {
+    liquidCap = 0.0;
+}
 
-class LiquidFT: public FuelTanks{
+LiquidFT::LiquidFT (string tip, double mas, int cos, float liquidCap_c) {
+    tipo = tip;
+    masa = mas;
+    costo = cos;
+    liquidCap = liquidCap_c;
+}
 
-    private:
-        float liquidCap;
-
-    public:
-        LiquidFT();
-        LiquidFT(string tip, double mas, int cos, float liquidCap_c);
-
-        float GetCap();
-};
-
-#endif
+float LiquidFT::GetCap(){
+    return liquidCap;
+}

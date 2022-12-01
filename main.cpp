@@ -8,13 +8,13 @@ main.cpp
 #include <iostream>
 #include <string>
 
-#include "Rocket.h"
 #include "E_IonFuel.h"
 #include "E_LiquidFuel.h"
 #include "E_SolidFuel.h"
 #include "FT_Liquid.h"
 #include "FT_RCS.h"
 #include "FT_Rocket.h"
+#include "Rocket.h"
 #include "Pods.h"
 
 using namespace std;
@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
     int opcion = 0;
 
 
-    Rocket pi("");
+    Rocket pi = Rocket("");
 
     cout << "\n Wecome to the Kerbal Space program Vehicle Assembly Building!\n";
     cout << "\nWernher von Kerman: Welcome to today's lecture on vessel";

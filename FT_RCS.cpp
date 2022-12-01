@@ -9,24 +9,22 @@ A01710879
  * Rocket FT, RCS FT, y Liquid FT
  */
 
-#ifndef FT_RCS_H_
-#define FT_RCS_H_
-
 #include <iostream>
 using namespace std;
-#include "FuelTanks.h"
+#include "FT_RCS.h"
 
 
-class RCSFT: public FuelTanks{
+RCSFT::RCSFT (){
+    monocap = 0;
+}
 
-    private:
-        int monocap;
+RCSFT::RCSFT (string tip, double mas, int cos, int monocap_c) {
+    tipo = tip;
+    masa = mas;
+    costo = cos;
+    monocap = monocap_c;
+}
 
-    public:
-        RCSFT();
-        RCSFT(string tip, double mas, int cos, int monocap_c);
-
-        float GetMonoCap();
-};
-
-#endif
+float RCSFT::GetMonoCap(){
+    return monocap;
+}
