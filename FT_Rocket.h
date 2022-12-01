@@ -23,11 +23,26 @@ class RocketFT: public FuelTanks{
         float oxidizer;
 
     public:
-        RocketFT();
-        RocketFT(string tip, double mas, int cos, float liquidCap_c, float oxidizer_c);
+        RocketFT () {
+            liquidCap = 0.0;
+            oxidizer = 0.0;
+        }
 
-        float GetOxidizer();
-        float GetCap();
+        RocketFT (string tip, double mas, int cos, float liquidCap_c, float oxidizer_c) {
+            tipo = tip;
+            masa = mas;
+            costo = cos;
+            liquidCap = liquidCap_c;
+            oxidizer = oxidizer_c;
+        }
+
+        float GetOxidizer(){
+            return oxidizer;
+        }
+
+        float GetCap(){
+            return liquidCap;
+        }
 };
 
 #endif

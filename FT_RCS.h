@@ -23,10 +23,20 @@ class RCSFT: public FuelTanks{
         int monocap;
 
     public:
-        RCSFT();
-        RCSFT(string tip, double mas, int cos, int monocap_c);
+        RCSFT (){
+            monocap = 0;
+        }
 
-        float GetMonoCap();
+        RCSFT (string tip, double mas, int cos, int monocap_c) {
+            tipo = tip;
+            masa = mas;
+            costo = cos;
+            monocap = monocap_c;
+        }
+
+        float GetMonoCap(){
+            return monocap;
+        }
 };
 
 #endif

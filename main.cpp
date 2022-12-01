@@ -7,6 +7,7 @@ main.cpp
 
 #include <iostream>
 #include <string>
+using namespace std;
 
 #include "E_IonFuel.h"
 #include "E_LiquidFuel.h"
@@ -14,10 +15,9 @@ main.cpp
 #include "FT_Liquid.h"
 #include "FT_RCS.h"
 #include "FT_Rocket.h"
+
 #include "Rocket.h"
 #include "Pods.h"
-
-using namespace std;
 
 void menu()
 {
@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
     int opcion = 0;
 
 
-    Rocket pi = Rocket("");
+    Rocket pi("Juan");
 
     cout << "\n Wecome to the Kerbal Space program Vehicle Assembly Building!\n";
     cout << "\nWernher von Kerman: Welcome to today's lecture on vessel";
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
     cout << "Please enter your name:";
     cin >> pilot;
     pi.setPilot(pilot);
-    cout << "\nPilot: " << pi.GetPilot() << " Kerman\n"
+    cout << "\nPilot: " << pi.getPilot() << " Kerman\n"
          << endl;
 
     while (opcion < 5 && opcion > -1)
@@ -84,7 +84,6 @@ int main(int argc, char* argv[])
 
         menu();
         cin >> opcion;
-    /*
         switch (opcion)
         {
 
@@ -147,6 +146,5 @@ int main(int argc, char* argv[])
 
             break;
         }
-    */
     }
 }

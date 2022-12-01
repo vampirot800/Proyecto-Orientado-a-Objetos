@@ -1,5 +1,5 @@
 /*
-Proyecto Kerbal Space Program 
+Proyecto Kerbal Space Program
 Ramiro Flores Villarreal
 A01710879
 */
@@ -23,16 +23,28 @@ class SolidFuel: public Engine{
         int comb;
 
     public:
-        SolidFuel();
-        SolidFuel(string tip, double mas, int cos, double atm,  double vac,double atmT, double vacT, float burn_c, int comb_c);
-        
-        float GetBurn();
-        int GetComb();
-};
-SolidFuel::SolidFuel(){
-    burn = 0.0;
-    comb = 0;
-}
+        SolidFuel() {
+            burn = 0.0;
+            comb = 0;
+        };
+        SolidFuel(string tip, double mas, int cos, double atm,  double vac,double atmT, double vacT, float burn_c, int comb_c) {
+            tipo = tip;
+            masa = mas;
+            costo = cos;
+            atmThrust = atm;
+            vacThrust = vac;
+            atmTWR = atmT;
+            vacTWR = vacT;
+            burn = burn_c;
+            comb = comb_c;
+        };
 
+        float GetBurn() {
+            return burn;
+        };
+        int GetComb() {
+            return comb;
+        };
+};
 
 #endif

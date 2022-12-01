@@ -24,9 +24,22 @@ private:
     float TVC;
 
 public:
-    LiquidFuel();
+    LiquidFuel() {
+        consumoMax = 0.0;
+        TVC = 0.0;
+    };
     LiquidFuel(string tip, double mas, int cos, double atm,
-               double vac, double atmT, double vacT, double consumoMax_c, float TVC_c);
+               double vac, double atmT, double vacT, double consumoMax_c, float TVC_c) {
+        tipo = tip;
+        masa = mas;
+        costo = cos;
+        atmThrust = atm;
+        vacThrust = vac;
+        atmTWR = atmT;
+        vacTWR = vacT;
+        consumoMax = consumoMax_c;
+        TVC = TVC_c;
+    };
 
     double GetConsumoMax()
     {
@@ -36,24 +49,6 @@ public:
     {
         return TVC;
     }
-};
-
-LiquidFuel::LiquidFuel() {
-    consumoMax = 0.0;
-    TVC = 0.0;
-}
-
-
-LiquidFuel::LiquidFuel(string tip, double mas, int cos, double atm, double vac, double atmT, double vacT, double consumoMax_c, float TVC_c) {
-    tipo = tip;
-    masa = mas;
-    costo = cos;
-    atmThrust = atm;
-    vacThrust = vac;
-    atmTWR = atmT;
-    vacTWR = vacT;
-    consumoMax = consumoMax_c;
-    TVC = TVC_c;
 };
 
 #endif

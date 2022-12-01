@@ -16,6 +16,7 @@ A01710879
 #include <string>
 #include <sstream>
 using namespace std;
+
 #include "FuelTanks.h"
 
 
@@ -25,10 +26,21 @@ class LiquidFT: public FuelTanks{
         float liquidCap;
 
     public:
-        LiquidFT();
-        LiquidFT(string tip, double mas, int cos, float liquidCap_c);
+        LiquidFT () {
+            liquidCap = 0.0;
+        }
 
-        float GetCap();
+        LiquidFT (string tip, double mas, int cos, float liquidCap_c) {
+            tipo = tip;
+            masa = mas;
+            costo = cos;
+            liquidCap = liquidCap_c;
+        }
+
+        float GetCap(){
+            return liquidCap;
+        }
+
 };
 
 #endif
