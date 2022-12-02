@@ -1,5 +1,5 @@
 /*
-Proyecto Kerbal Space Program 
+Proyecto Kerbal Space Program
 Ramiro Flores Villarreal
 A01710879
 */
@@ -15,40 +15,55 @@ A01710879
 
 #include <iostream>
 using namespace std;
+
+//importacion de archivo de donde se hereda
 #include "FuelTanks.h"
 
+//Declaracion de clase RocketFT que hereda de FuelTanks
 class RocketFT: public FuelTanks{
+
+    //atributos
     private:
         float liquidCap;
         float oxidizer;
 
+    //metodos 
     public:
-        RocketFT();
-        RocketFT(string tip, double mas, int cos, float liquidCap_c, float oxidizer_c);
 
-        float GetOxidizer();
-        float GetCap();
+        //constructores
+        RocketFT () :
+            FuelTanks(),
+            liquidCap(0.0),
+            oxidizer(0.0) {};
+
+        RocketFT (string tip, double mas, int cos, float liquidCap_c, float oxidizer_c) :
+            FuelTanks(tip, mas, cos),
+            liquidCap(liquidCap_c),
+            oxidizer(oxidizer_c) {};
+
+            //Getters y Setters
+        float GetOxidizer(){
+            return oxidizer;
+        }
+
+        float GetCap(){
+            return liquidCap;
+        }
+
+        //Funcion imprime stats para subclase de Fuel Tanks,se agregan variables 
+        void showStatsFT(){
+
+            cout << "Fuel Tank Type:" << GetTipo() << endl;
+            cout << "Fuel Tank Mass:" << GetMasa() << endl;
+            cout << "Fuel Tank Cost:" << GetCosto() << endl;
+            cout << "Oxidizer:" << GetOxidizer() << endl;
+            cout << "Liquid Cap:" << GetCap() << endl;
+
+
+        }
+
+        
+
 };
 
-RocketFT::RocketFT (){
-    liquidCap = 0.0;
-    oxidizer = 0.0;
-}
-
-RocketFT::RocketFT (string tip, double mas, int cos, float liquidCap_c, 
-    float oxidizer_c){
-    tipo = tip;
-    masa = mas;
-    costo = cos;
-    liquidCap = liquidCap_c;
-    oxidizer = oxidizer_c;
-}
-
-float RocketFT::GetOxidizer(){
-    return oxidizer;
-}
-
-float RocketFT::GetCap(){
-    return liquidCap;
-}
 #endif

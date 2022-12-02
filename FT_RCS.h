@@ -1,5 +1,5 @@
 /*
-Proyecto Kerbal Space Program 
+Proyecto Kerbal Space Program
 Ramiro Flores Villarreal
 A01710879
 */
@@ -14,33 +14,45 @@ A01710879
 
 #include <iostream>
 using namespace std;
+
+//importacion de archivo de donde se hereda
 #include "FuelTanks.h"
 
-
+//Declaracion de clase RCSFT que hereda de FuelTanks
 class RCSFT: public FuelTanks{
 
+    //atributos
     private:
         int monocap;
 
+    //metodos
     public:
-        RCSFT();
-        RCSFT(string tip, double mas, int cos, int monocap_c);
+        //constructores
+        RCSFT () :
+            FuelTanks(),
+            monocap(0) {};
 
-        float GetMonoCap();
+        RCSFT (string tip, double mas, int cos, int monocap_c) :
+            FuelTanks(tip, mas, cos),
+            monocap(monocap_c) {};
+
+        //Getter
+        float GetMonoCap(){
+            return monocap;
+        }
+
+        //Funcion imprime stats para subclase de Fuel Tanks, se agregan variables 
+        void showStatsFT(){
+
+            cout << "Fuel Tank Type:" << GetTipo() << endl;
+            cout << "Fuel Tank Mass:" << GetMasa() << endl;
+            cout << "Fuel Tank Cost:" << GetCosto() << endl;
+            cout << "MonoCap:" << GetMonoCap() << endl;
+
+
+        }
+
+
 };
 
-RCSFT::RCSFT (){
-    monocap = 0;
-}
-
-RCSFT::RCSFT (string tip, double mas, int cos, int monocap_c) {
-    tipo = tip;
-    masa = mas;
-    costo = cos;
-    monocap = monocap_c;
-}
-
-float RCSFT::GetMonoCap(){
-    return monocap;
-}
 #endif

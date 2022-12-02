@@ -17,9 +17,11 @@ A01710879
 #include <string>
 using namespace std;
 
+//Declaracion clase Engine
 class Engine
 {
 
+//atributos protegidos que seran heredados
 protected:
     string tipo;
     double masa;
@@ -28,29 +30,28 @@ protected:
     double vacThrust;
     double atmTWR;
     double vacTWR;
-
+//metodos publicos que seran heredados
 public:
-    Engine(){
-        tipo = "";
-        masa = 0.0;
-        costo = 0;
-        atmThrust = 0.0;
-        vacThrust = 0.0;
-        atmTWR = 0.0;
-        vacTWR = 0.0;
-    }
-    
-    Engine(string tip, double mas, int cos, double atm,
-           double vac, double atmT, double vacT)
-    {
-        tipo = tip;
-        masa = mas;
-        costo = cos;
-        atmThrust = atm;
-        vacThrust = vac;
-        atmTWR = atmT;
-        vacTWR = vacT;
-    }
+    //constructores
+    Engine() :
+        tipo(""),
+        masa(0.0),
+        costo(0),
+        atmThrust(0.0),
+        vacThrust(0.0),
+        atmTWR(0.0),
+        vacTWR(0.0) {};
+
+    Engine(string tip, double mas, int cos, double atm, double vac, double atmT, double vacT) :
+        tipo(tip),
+        masa(mas),
+        costo(cos),
+        atmThrust(atm),
+        vacThrust(vac),
+        atmTWR(atmT),
+        vacTWR(vacT) {};
+
+    //Getters y Setters
     string GetTipo()
     {
         return tipo;
@@ -106,6 +107,19 @@ public:
     void setvacTWR(double vt)
     {
         vacTWR = vt;
+    }
+
+
+    //Funcion imprime stats para clase de Engines
+    void showStatsE(){
+
+        cout << "Engine Type:" << tipo << endl;
+        cout << "Engine Mass:" << masa << endl;
+        cout << "Engine Cost:" << costo << endl;
+        cout << "atm Thrust:" << atmThrust << endl;
+        cout << "vac Thrust" << vacThrust << endl;
+        cout << "atm TWR:" << atmTWR << endl;
+        cout << "vac TWR:" << vacTWR << endl;
     }
 };
 

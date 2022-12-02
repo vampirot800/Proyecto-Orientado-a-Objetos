@@ -14,16 +14,20 @@ A01710879
 #include <string>
 using namespace std;
 
+//Declaracion clase pods
 class Pods{
 
+    //atributos
     private:
         string tipo;
         double masa;
         int costo;
         int capacidad;
 
+    //metodos
     public:
 
+    //constructores
     Pods(){
         tipo = "";
         masa = 0.0;
@@ -37,7 +41,7 @@ class Pods{
             costo = cos;
             capacidad = cap;
         }
-
+        //Getters y Setters
         string GetTipo(){
             return tipo;
         }
@@ -63,8 +67,16 @@ class Pods{
             capacidad = ca;
         }
 
+    //Funcion imprime stats para clase de Pods
+        void showStatsP(){
+
+            cout << "Pod type:"<< tipo << endl;
+            cout << "Capacity:"<< capacidad << endl;
 
 
 
+        }
 };
+
+
 #endif

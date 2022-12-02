@@ -1,5 +1,5 @@
 /*
-Proyecto Kerbal Space Program 
+Proyecto Kerbal Space Program
 Ramiro Flores Villarreal
 A01710879
 */
@@ -16,35 +16,44 @@ A01710879
 #include <string>
 #include <sstream>
 using namespace std;
+
+//importacion de archivo de donde se hereda
 #include "FuelTanks.h"
 
-
+//Declaracion de clase LiquidFT que hereda de FuelTanks
 class LiquidFT: public FuelTanks{
 
+    //atributos
     private:
         float liquidCap;
 
+    //metodos
     public:
-        LiquidFT();
-        LiquidFT(string tip, double mas, int cos, float liquidCap_c);
+        //constructores
+        LiquidFT () :
+            FuelTanks(),
+            liquidCap(0.0) {};
 
-        float GetCap();
-};  
+        LiquidFT (string tip, double mas, int cos, float liquidCap_c) :
+            FuelTanks(tip, mas, cos),
+            liquidCap(liquidCap_c) {};
 
-LiquidFT::LiquidFT () {
-    liquidCap = 0.0;
-}
+        //Getter
+        float GetCap(){
+            return liquidCap;
+        }
 
-LiquidFT::LiquidFT (string tip, double mas, int cos, float liquidCap_c) {
-    tipo = tip;
-    masa = mas;
-    costo = cos;
-    liquidCap = liquidCap_c;
-}
+        //Funcion imprime stats para subclase de Fuel Tanks, se agregan variables 
+        void showStatsFT(){
 
-float LiquidFT::GetCap(){
-    return liquidCap;
-}
+            cout << "Fuel Tank Type:" << GetTipo() << endl;
+            cout << "Fuel Tank Mass:" << GetMasa() << endl;
+            cout << "Fuel Tank Cost:" << GetCosto() << endl;
+            cout << "Liquid Cap:" << GetCap() << endl;
 
+
+        }
+
+};
 
 #endif
