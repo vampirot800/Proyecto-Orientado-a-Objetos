@@ -33,7 +33,8 @@ class LiquidFuel : public Engine
         //constructores
         LiquidFuel() :
             Engine(), consumoMax(0.0), TVC(0.0) {};
-        LiquidFuel(string tip, double mas, int cos, double atm, double vac, double atmT, double vacT, double consumoMax_c, float TVC_c) :
+        LiquidFuel(string tip, double mas, int cos, double atm, double vac, 
+        double atmT, double vacT, double consumoMax_c, float TVC_c) :
             Engine(tip, mas, cos, atm, vacT, atmT, vacT),
             consumoMax(consumoMax_c),
             TVC(TVC_c) {};

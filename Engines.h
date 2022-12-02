@@ -42,7 +42,8 @@ public:
         atmTWR(0.0),
         vacTWR(0.0) {};
 
-    Engine(string tip, double mas, int cos, double atm, double vac, double atmT, double vacT) :
+    Engine(string tip, double mas, int cos, double atm, double vac, 
+    double atmT, double vacT) :
         tipo(tip),
         masa(mas),
         costo(cos),

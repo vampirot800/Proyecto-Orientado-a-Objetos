@@ -36,7 +36,8 @@ class RocketFT: public FuelTanks{
             liquidCap(0.0),
             oxidizer(0.0) {};
 
-        RocketFT (string tip, double mas, int cos, float liquidCap_c, float oxidizer_c) :
+        RocketFT (string tip, double mas, int cos, float liquidCap_c, 
+        float oxidizer_c) :
             FuelTanks(tip, mas, cos),
             liquidCap(liquidCap_c),
             oxidizer(oxidizer_c) {};

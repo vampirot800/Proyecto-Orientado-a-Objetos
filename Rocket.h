@@ -97,14 +97,16 @@ private:
         void addLiquidFuel()
         {
             //Objeto 1 clase Engine
-            e1 = LiquidFuel("LV-T45 Swivel", 1.50, 1200, 167.97, 215.0, 11.42, 14.62, 13.703, 3.0);
+            e1 = LiquidFuel("LV-T45 Swivel", 1.50, 1200, 167.97, 215.0, 11.42, 
+            14.62, 13.703, 3.0);
             hasLiquidFuel = true;
         }
 
         void addIonFuel()
         {
             //Objeto 2 clase Engine
-            e2 = IonFuel("IX-6315 Dawn", 0.25, 8000, 0.048, 2.0, 0.019, 0.816, 0.486, 8.741);
+            e2 = IonFuel("IX-6315 Dawn", 0.25, 8000, 0.048, 2.0, 0.019, 0.816,
+             0.486, 8.741);
             hasIonFuel = true;
         }
 
@@ -120,11 +122,13 @@ private:
             //if que declara los dos Objetos (3) de la misma clase a añadir
             if (type == 1)
             {
-                e3 = SolidFuel("RT_10 Hammer", 3.56, 400, 197.90, 227.00, 5.66, 6.50, 23.7, 375);
+                e3 = SolidFuel("RT_10 Hammer", 3.56, 400, 197.90, 227.00,
+                 5.66, 6.50, 23.7, 375);
             }
             else if (type == 2)
             {
-                e3 = SolidFuel("BACC Thumper", 7.65, 850, 250.00, 300.00, 3.33, 4.00, 42.2, 820);
+                e3 = SolidFuel("BACC Thumper", 7.65, 850, 250.00, 300.00,
+                 3.33, 4.00, 42.2, 820);
             }
             hasSolidFuel = true;
         }
@@ -194,7 +198,8 @@ private:
             cost = costos;
         }
 
-        //Funcion que muestra las estadisticas del cohete con los objetos seleccionados
+        /*Funcion que muestra las estadisticas del cohete con los objetos
+        seleccionados*/
         void showstats(){
 
             //Funcion que suma costos y masas de objetos
@@ -203,9 +208,10 @@ private:
             //Introduccion con nombre al programa
             cout << "Pilot:" << pilot << " Kerman" << endl;
             cout << "Rocket Mass:" << mass << endl;
-            cout << "Total cost:" << cost << endl;
+            cout << "Total cost:" << cost << "Funds" << endl;
         
-            //Condicionales para todos los objetos disponibles, imprime las estadisticas.
+            /*Condicionales para todos los objetos disponibles, imprime 
+            las estadisticas.*/
             if (hasLiquidFuel) {
                 e1.showStatsE();
             }

@@ -43,7 +43,7 @@ class LiquidFT: public FuelTanks{
             return liquidCap;
         }
 
-        //Funcion imprime stats para subclase de Fuel Tanks, se agregan variables 
+        //Funcion imprime stats para subclase de FT, se agregan variables 
         void showStatsFT(){
 
             cout << "Fuel Tank Type:" << GetTipo() << endl;

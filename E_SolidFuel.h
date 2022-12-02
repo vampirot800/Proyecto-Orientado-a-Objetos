@@ -3,6 +3,7 @@ Proyecto Kerbal Space Program
 Ramiro Flores Villarreal
 A01710879
 */
+
 /*
  *Clases hijas de la clase Engines contiene uno de los
  *tres tipos de engines disponible (Solid Fuel)
@@ -34,7 +35,8 @@ class SolidFuel: public Engine{
             Engine(),
             burn(0.0),
             comb(0) {};
-        SolidFuel(string tip, double mas, int cos, double atm,  double vac,double atmT, double vacT, float burn_c, int comb_c) :
+        SolidFuel(string tip, double mas, int cos, double atm, 
+        double vac,double atmT, double vacT, float burn_c, int comb_c) :
             Engine(tip, mas, cos, atm, vacT, atmT, vacT),
             burn(burn_c),
             comb(comb_c) { };

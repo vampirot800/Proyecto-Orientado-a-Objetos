@@ -19,6 +19,8 @@ using namespace std;
 #include "FT_RCS.h"
 #include "FT_Rocket.h"
 
+
+
 /*Clase con composicion donde se crean los objetos
 que tendra el cohete, contiene todos los atributos
 metodos de geters y setters, metodos para añadir
