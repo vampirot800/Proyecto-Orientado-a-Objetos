@@ -2,7 +2,7 @@
 
 ## Proyecto Orientado a Objetos
 
-##Diagrama de clases
+## Diagrama de clases
 
 ![Diagrama de clases](UML.png)
 
