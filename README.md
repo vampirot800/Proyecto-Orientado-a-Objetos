@@ -1,5 +1,10 @@
 # Proyecto-Kerbal-Space-Program-VAB
+
 ## Proyecto Orientado a Objetos
+
+##Diagrama de clases
+
+![Diagrama de clases](UML.png)
 
 ### Descripción
 
@@ -8,4 +13,5 @@ El Proyecto Kerbal Space Program VAB, se basa en un simulador del VAB (Vehicle-A
 Cada cohete tiene sus estadisticas base las cuales cambiaran y seran afectadas dependiendo de los componentes seleccionados.
 
 ### Funcionalidad
+
 El programa constara con un menu, del cual el usuario elegira las opciones deseadas y finalmente podra desplegar las estadisticas finales del cohete, las cuales se mostraran en pantalla.
